@@ -1,0 +1,18 @@
+npm install tailwindcss @tailwindcss/cli
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+
+social links
+<i class="ri-twitter-x-line"></i>
+<i class="ri-instagram-line"></i>
+<i class="ri-facebook-fill"></i>
+<i class="ri-google-fill"></i>
+
+add cart icon
+<i class="ri-shopping-basket-fill"></i>
+
+menu icon
+<i class="ri-menu-2-line"></i>
+<i class="ri-close-fill"></i>
+
+logout icon 
+<i class="ri-logout-box-r-fill"></i>

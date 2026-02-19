@@ -16,3 +16,10 @@ menu icon
 
 logout icon 
 <i class="ri-logout-box-r-fill"></i>
+
+
+lead clr #212121
+gold finger clr #F2bd12
+background clr #FFFDF7
+hint yellow #fcf1cc
+pure white #fff

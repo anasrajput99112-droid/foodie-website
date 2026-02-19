@@ -1,14 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>food delvery website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/src/output.css">
-</head>
-<body>
-    <i class="ri-facebook-fill text-7xl"></i>
-    <h1 class="font-sans font-bold text-9xl">hello</h1>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body class="bg-[#FFFDF7]">
+    <header>
+      <nav class="container flex py-3.5 justify-between items-center">
+        <div>
+          <h1 class="text-3xl font-bold text-[#F2bd12]">Foodie.</h1>
+        </div>
+
+        <ul class="flex gap-6 font-[500] hidden md:flex">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Serivce</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <!-- add cart icon -->
+          <a href="#" id="cart-icon" class="text-4xl md:text-3xl relative">
+            <i class="ri-shopping-basket-fill"></i>
+            <span id="cart-value" class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-7 -right-1 w-[25px] h-[25px] rounded-lg font-semibold">
+             0
+            </span>
+          </a>
+
+          <!-- menubtn -->
+          <div class="text-3xl font-bold text-[#000] md:hidden cursor-pointer">
+            <i class="ri-menu-line"></i>
+          </div>
+
+           <div class="hidden md:block">
+          <button class="btn">
+            Sign in
+            <i class="ri-logout-box-r-fill"></i>
+          </button>
+        </div>
+        </div>
+
+       
+
+      </nav>
+    </header>
+
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+
+    <footer></footer>
+
+    <script src="/js/main.js"></script>
+  </body>
 </html>

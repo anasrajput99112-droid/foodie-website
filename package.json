@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "Muhammad anas",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "index.html"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",

@@ -9,14 +9,17 @@
   @apply text-[#fff] bg-[#F2bd12] py-2 px-3 duration-500 ease-linear lg:py-3 lg:px-5 rounded-lg cursor-pointer;
 }
 
-.btn:hover {
+/* .btn:hover {
   @apply bg-[#FFFDF7] border-2  border-amber-400 text-black;
+} */
+
+html {
+  @apply scroll-smooth;
 }
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --font-serif: "Lobster", cursive; 
+  --font-serif: "Lobster", cursive;
   --font-mono: "Noto Sans", sans-serif;
   --font-poppins: "Poppins", sans-serif;
-  --font-space-grotesk: "Space Grotesk", sans-serif;
 }

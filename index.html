@@ -13,37 +13,38 @@
     />
     <link rel="stylesheet" href="/src/output.css" />
   </head>
-  <body class="bg-[#FFFDF7]">
+
+  <body class="bg-[#FFFDF7] font-poppins">
     <header>
       <nav class="container flex py-3.5 justify-between items-center">
         <div>
           <h1 class="text-3xl font-bold text-[#F2bd12]">Foodie.</h1>
         </div>
 
-        <ul class="flex gap-6 font-[500] hidden md:flex">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Serivce</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contacts</a></li>
+        <ul id="navbar" class="flex flex-col items-center absolute top-[20%] left-[-100%] duration-500 transition-all transform translate-x-[-50%]  p-[2rem] shadow-2xl  px-30 bg-amber-50 gap-6 font-[500] border-[.1rem] border-amber-300 rounded-[2rem] lg:flex lg:flex-row lg:sticky lg:top-0 lg:left-0 lg:translate-x-[0%]  lg:bg-transparent  lg:border-0 lg:px-0 lg:shadow-[0] lg:transition-none lg:duration-0">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Menu">Menu</a></li>
+          <li><a href="#Service">Service</a></li>
+          <li><a href="#About">About us</a></li>
+          <li><a href="#Contact">Contacts</a></li>
         </ul>
 
         <div class="flex items-center gap-5">
           <!-- add cart icon -->
           <a href="#" id="cart-icon" class="text-4xl md:text-3xl relative">
             <i class="ri-shopping-basket-fill"></i>
-            <span id="cart-value" class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-7 -right-1 w-[25px] h-[25px] rounded-lg font-semibold">
+            <span id="cart-value" class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-5 -right-1 w-[23px] h-[23px] rounded-[50%] text-[1rem] font-semibold">
              0
             </span>
           </a>
 
           <!-- menubtn -->
-          <div class="text-3xl font-bold text-[#000] md:hidden cursor-pointer">
+          <div class="text-3xl font-bold text-[#000] lg:hidden cursor-pointer">
             <i class="ri-menu-line"></i>
           </div>
 
-           <div class="hidden md:block">
-          <button class="btn">
+           <div class="hidden lg:block">
+          <button id="menuBtn" class="btn">
             Sign in
             <i class="ri-logout-box-r-fill"></i>
           </button>
@@ -56,13 +57,92 @@
     </header>
 
     <main>
-      <section></section>
-      <section></section>
+        <!-- HERO-SECTION -->
+      <section class="w-full py-30 lg:py-0">
+        <div class="container">
+
+         <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+          <article>
+            <h1 class="text-5xl font-semibold lg:text-7xl pb-4 font-serif">Enjoy Your<br>Delicious<span class="text-[#F2bd12]">Food</span></h1>
+            <p class="max-w-[300px] font-serif">We will fill your tummy with delicious food with fast delivery.</p>
+            <div class="flex items-center gap-5 mt-10">
+              <div>
+                <button class="btn">Order Now</button>
+              </div>
+              <!-- socail icons -->
+               <div class="flex gap-5">
+                <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-twitter-x-line"></i>
+                <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-instagram-line"></i>
+                <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-facebook-fill"></i>
+                <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-google-fill"></i>
+               </div>
+            </div>
+
+          </article>
+
+          <!-- hero-section-image -->
+           <div>
+            <img src="./assets/delivery-boy.png" alt="hero.png" class="m-auto block">
+           </div>
+         </div>
+          
+        
+      </section>
+      <!-- SERVICE-SECTION -->
+      <section class="w-full py-25 lg:py20">
+        <div class="container">
+
+          <div class="text-center">
+            <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR SERIVCE</h4>
+            <h1 class="text-3xl font-extrabold">How Does IT Work?</h1>
+          </div>
+          <!-- cards-container -->
+           <div class="py-22 flex flex-col gap-15 lg:flex-row lg:justify-center lg:gap-28">
+
+            <div class=" flex flex-col justify-center items-center">
+
+              <div>
+                <img class="w-20" src="/assets/easy-to-order.png" alt="easy-order-png">
+              </div>
+              <div class="text-center pb-2">
+                <h1 class="font-extrabold py-3 text-[1.3rem]">Easy To Order</h1>
+                <p class="text-gray-500">You only need a few step in ordering food.</p>
+              </div>
+            </div>
+
+             <div class=" flex flex-col justify-center items-center">
+
+              <div>
+                <img class="w-20" src="/assets/fast-delivery.png" alt="easy-order-png">
+              </div>
+              <div class="text-center pb-2">
+                <h1 class="font-extrabold py-3 text-[1.3rem]">Fast Delivery</h1>
+                <p class="text-gray-500">Delivery that is always even faster.</p>
+              </div>
+            </div>
+
+
+             <div class=" flex flex-col justify-center items-center">
+
+              <div>
+                <img class="w-20" src="/assets/best-quality.png" alt="easy-order-png">
+              </div>
+              <div class="text-center pb-2">
+                <h1 class="font-extrabold py-3 text-[1.3rem]">Best Quality</h1>
+                <p class="text-gray-500">Not only fast us in quality is also number one.</p>
+              </div>
+            </div>
+
+            
+
+           </div>
+        </div>
+      </section>
       <section></section>
     </main>
 
     <footer></footer>
 
-    <script src="/js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

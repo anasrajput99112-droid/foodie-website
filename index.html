@@ -31,7 +31,7 @@
 
         <div class="flex items-center gap-5">
           <!-- add cart icon -->
-          <a href="#" id="cart-icon" class="text-4xl md:text-3xl relative">
+          <a href="#" id="cart-icon" class="text-3xl md:text-4xl relative">
             <i class="ri-shopping-basket-fill"></i>
             <span id="cart-value" class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-5 -right-1 w-[23px] h-[23px] rounded-[50%] text-[1rem] font-semibold">
              0
@@ -58,13 +58,13 @@
 
     <main>
         <!-- HERO-SECTION -->
-      <section class="w-full py-30 lg:py-0">
+      <section class="w-full py-30 lg:py-0" id="Home">
         <div class="container">
 
          <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
-          <article>
-            <h1 class="text-5xl font-semibold lg:text-7xl pb-4 font-serif">Enjoy Your<br>Delicious<span class="text-[#F2bd12]">Food</span></h1>
-            <p class="max-w-[300px] font-serif">We will fill your tummy with delicious food with fast delivery.</p>
+          <article class="flex-1">
+            <h1 class="text-5xl font-semibold lg:text-7xl pb-4">Enjoy Your<br>Delicious<span class="text-[#F2bd12]">Food</span></h1>
+            <p class="max-w-[300px]">We will fill your tummy with delicious food with fast delivery.</p>
             <div class="flex items-center gap-5 mt-10">
               <div>
                 <button class="btn">Order Now</button>
@@ -81,15 +81,15 @@
           </article>
 
           <!-- hero-section-image -->
-           <div>
-            <img src="./assets/delivery-boy.png" alt="hero.png" class="m-auto block">
+           <div class="flex-1">
+            <img src="./assets/delivery-boy.png" alt="hero.png" class="m-auto">
            </div>
          </div>
           
         
       </section>
       <!-- SERVICE-SECTION -->
-      <section class="w-full py-25 lg:py20">
+      <section class="w-full py-25 lg:py20" id="Service">
         <div class="container">
 
           <div class="text-center">
@@ -138,7 +138,140 @@
            </div>
         </div>
       </section>
-      <section></section>
+      <!-- MENU-SECTION -->
+      <section>
+        <div class="container">
+         <div class="text-center">
+            <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR MENU</h4>
+            <h1 class="text-3xl font-extrabold">The Most Popular</h1>
+          </div>
+          <!-- menu-cards-container -->
+           <div class="py-20 grid grid-cols-1 gap-10 lg:grid-cols-4 md:grid-cols-2  justify-items-center">
+
+            <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/burger.png" alt="burger-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Double Beef Burger</h1>
+
+                <span class="text-[#F2bd12] font-bold">$12.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/pizza.png" alt="pizza-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Veggie pizza</h1>
+
+                <span class="text-[#F2bd12] font-bold">$10.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/fried-chicken.png" alt="fried-chicken-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Fried Chicken</h1>
+
+                <span class="text-[#F2bd12] font-bold">$13.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/chicken-roll.png" alt="burger-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Chicken Roll</h1>
+
+                <span class="text-[#F2bd12] font-bold">$7.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/sandwich.png" alt="sandwich-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Sub Sandwich</h1>
+
+                <span class="text-[#F2bd12] font-bold">$6.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/lasagna.png" alt="lasagna-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Chicken Lasagna</h1>
+
+                <span class="text-[#F2bd12] font-bold">$14.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/spaghetti.png" alt="spaghetti-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Tallian Spaghetti</h1>
+
+                <span class="text-[#F2bd12] font-bold">$7.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+
+             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+              <div>
+                <img class="w-45 lg:w-52" src="/assets/spring-roll.png" alt="spring-roll-png">
+              </div>
+              <div class="text-center">
+                <h1 class="text-xl font-bold">Spring Roll</h1>
+
+                <span class="text-[#F2bd12] font-bold">$5.99</span>
+              </div>
+              <div>
+                <button class="btn">Add to cart</button>
+              </div>
+
+            </div>
+            
+           </div>
+           </div>
+      </section>
     </main>
 
     <footer></footer>

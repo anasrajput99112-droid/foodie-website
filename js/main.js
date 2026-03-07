@@ -1,10 +1,16 @@
-const humbergerMenu = document.getElementById("menuBtn");
-const navBar = document.getElementById("navbar");
-
-humbergerMenu.addEventListener("click", () => {
-    navBar.classList.toggle("left-[50%]");
-    console.log("hellow");
-    
+var swiper = new Swiper(".mySwiper", {
+   loop: true,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
+   navigation: {
+      nextEl: "#prev",
+      prevEl: "#next",
+   },
+    breakpoints: {
+    640: {
+      slidesPerView: 1,
+    }
+  },
 });
-
-console.log("helloe");

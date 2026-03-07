@@ -1,281 +1,446 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>food delvery website</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="/src/output.css" />
-  </head>
 
-  <body class="bg-[#FFFDF7] font-poppins">
-    <header>
-      <nav class="container flex py-3.5 justify-between items-center">
-        <div>
-          <h1 class="text-3xl font-bold text-[#F2bd12]">Foodie.</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>food delvery website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="/src/output.css" />
+</head>
+
+<body class="bg-[#FFFDF7] font-poppins">
+  <header>
+    <nav class="container flex py-3.5 justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-[#F2bd12]">Foodie.</h1>
+      </div>
+
+      <ul id="navbar"
+        class="flex flex-col items-center absolute top-[20%] left-[-100%] duration-500 transition-all transform translate-x-[-50%]  p-[2rem] shadow-2xl  px-30 bg-amber-50 gap-6 font-[500] border-[.1rem] border-amber-300 rounded-[2rem] lg:flex lg:flex-row lg:sticky lg:top-0 lg:left-0 lg:translate-x-[0%]  lg:bg-transparent  lg:border-0 lg:px-0 lg:shadow-[0] lg:transition-none lg:duration-0">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Menu">Menu</a></li>
+        <li><a href="#Service">Service</a></li>
+        <li><a href="#About">About us</a></li>
+        <li><a href="#Contact">Contacts</a></li>
+      </ul>
+
+      <div class="flex items-center gap-5">
+        <!-- add cart icon -->
+        <a href="#" id="cart-icon" class="text-3xl md:text-4xl relative">
+          <i class="ri-shopping-basket-fill"></i>
+          <span id="cart-value"
+            class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-5 -right-1 w-[23px] h-[23px] rounded-[50%] text-[1rem] font-semibold">
+            0
+          </span>
+        </a>
+
+        <!-- menubtn -->
+        <div class="text-3xl font-bold text-[#000] lg:hidden cursor-pointer">
+          <i class="ri-menu-line"></i>
         </div>
 
-        <ul id="navbar" class="flex flex-col items-center absolute top-[20%] left-[-100%] duration-500 transition-all transform translate-x-[-50%]  p-[2rem] shadow-2xl  px-30 bg-amber-50 gap-6 font-[500] border-[.1rem] border-amber-300 rounded-[2rem] lg:flex lg:flex-row lg:sticky lg:top-0 lg:left-0 lg:translate-x-[0%]  lg:bg-transparent  lg:border-0 lg:px-0 lg:shadow-[0] lg:transition-none lg:duration-0">
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Menu">Menu</a></li>
-          <li><a href="#Service">Service</a></li>
-          <li><a href="#About">About us</a></li>
-          <li><a href="#Contact">Contacts</a></li>
-        </ul>
-
-        <div class="flex items-center gap-5">
-          <!-- add cart icon -->
-          <a href="#" id="cart-icon" class="text-3xl md:text-4xl relative">
-            <i class="ri-shopping-basket-fill"></i>
-            <span id="cart-value" class="flex items-center justify-center text-[1.2rem] bg-[#F2bd12] absolute top-5 -right-1 w-[23px] h-[23px] rounded-[50%] text-[1rem] font-semibold">
-             0
-            </span>
-          </a>
-
-          <!-- menubtn -->
-          <div class="text-3xl font-bold text-[#000] lg:hidden cursor-pointer">
-            <i class="ri-menu-line"></i>
-          </div>
-
-           <div class="hidden lg:block">
+        <div class="hidden lg:block">
           <button id="menuBtn" class="btn">
             Sign in
             <i class="ri-logout-box-r-fill"></i>
           </button>
         </div>
-        </div>
+      </div>
 
-       
 
-      </nav>
-    </header>
 
-    <main>
-        <!-- HERO-SECTION -->
-      <section class="w-full py-30 lg:py-0" id="Home">
-        <div class="container">
+    </nav>
+  </header>
 
-         <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+  <main>
+    <!-- HERO-SECTION -->
+    <section class="w-full py-30 lg:py-0" id="Home">
+      <div class="container">
+
+        <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
           <article class="flex-1">
-            <h1 class="text-5xl font-semibold lg:text-7xl pb-4">Enjoy Your<br>Delicious<span class="text-[#F2bd12]">Food</span></h1>
+            <h1 class="text-5xl font-semibold lg:text-7xl pb-4">Enjoy Your<br>Delicious<span
+                class="text-[#F2bd12]">Food</span></h1>
             <p class="max-w-[300px]">We will fill your tummy with delicious food with fast delivery.</p>
-            <div class="flex items-center gap-5 mt-10">
+            <div class="flex  gap-5 mt-10 flex-col  lg:flex-row lg:items-center">
               <div>
                 <button class="btn">Order Now</button>
               </div>
               <!-- socail icons -->
-               <div class="flex gap-5">
+              <div class="flex gap-5">
                 <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-twitter-x-line"></i>
                 <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-instagram-line"></i>
                 <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-facebook-fill"></i>
                 <i class="bg-amber-100 p-[.5rem] rounded-[.9rem] ri-google-fill"></i>
-               </div>
+              </div>
             </div>
 
           </article>
 
           <!-- hero-section-image -->
-           <div class="flex-1">
+          <div class="flex-1">
             <img src="./assets/delivery-boy.png" alt="hero.png" class="m-auto">
-           </div>
-         </div>
-          
-        
-      </section>
-      <!-- SERVICE-SECTION -->
-      <section class="w-full py-25 lg:py20" id="Service">
-        <div class="container">
-
-          <div class="text-center">
-            <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR SERIVCE</h4>
-            <h1 class="text-3xl font-extrabold">How Does IT Work?</h1>
           </div>
-          <!-- cards-container -->
-           <div class="py-22 flex flex-col gap-15 lg:flex-row lg:justify-center lg:gap-28">
+        </div>
 
-            <div class=" flex flex-col justify-center items-center">
 
-              <div>
-                <img class="w-20" src="/assets/easy-to-order.png" alt="easy-order-png">
-              </div>
-              <div class="text-center pb-2">
-                <h1 class="font-extrabold py-3 text-[1.3rem]">Easy To Order</h1>
-                <p class="text-gray-500">You only need a few step in ordering food.</p>
-              </div>
+    </section>
+
+    <!-- SERVICE-SECTION -->
+    <section class="w-full py-25 lg:py20" id="Service">
+      <div class="container">
+
+        <div class="text-center">
+          <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR SERIVCE</h4>
+          <h1 class="text-3xl font-extrabold">How Does IT Work?</h1>
+        </div>
+        <!-- cards-container -->
+        <div class="py-22 flex flex-col gap-15 lg:flex-row lg:justify-center lg:gap-28">
+
+          <div class=" flex flex-col justify-center items-center">
+
+            <div>
+              <img class="w-20" src="/assets/easy-to-order.png" alt="easy-order-png">
+            </div>
+            <div class="text-center pb-2">
+              <h1 class="font-extrabold py-3 text-[1.3rem]">Easy To Order</h1>
+              <p class="text-gray-500">You only need a few step in ordering food.</p>
+            </div>
+          </div>
+
+          <div class=" flex flex-col justify-center items-center">
+
+            <div>
+              <img class="w-20" src="/assets/fast-delivery.png" alt="easy-order-png">
+            </div>
+            <div class="text-center pb-2">
+              <h1 class="font-extrabold py-3 text-[1.3rem]">Fast Delivery</h1>
+              <p class="text-gray-500">Delivery that is always even faster.</p>
+            </div>
+          </div>
+
+
+          <div class=" flex flex-col justify-center items-center">
+
+            <div>
+              <img class="w-20" src="/assets/best-quality.png" alt="easy-order-png">
+            </div>
+            <div class="text-center pb-2">
+              <h1 class="font-extrabold py-3 text-[1.3rem]">Best Quality</h1>
+              <p class="text-gray-500">Not only fast us in quality is also number one.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU-SECTION -->
+    <section class="w-full" id="Menu">
+      <div class="container">
+        <div class="text-center">
+          <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR MENU</h4>
+          <h1 class="text-3xl font-extrabold">The Most Popular</h1>
+        </div>
+        <!-- menu-cards-container -->
+        <div class="py-20 grid grid-cols-1 gap-10 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  justify-items-center">
+
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/burger.png" alt="burger-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Double Beef Burger</h1>
+
+              <span class="text-[#F2bd12] font-bold">$12.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
             </div>
 
-             <div class=" flex flex-col justify-center items-center">
+          </div>
 
-              <div>
-                <img class="w-20" src="/assets/fast-delivery.png" alt="easy-order-png">
-              </div>
-              <div class="text-center pb-2">
-                <h1 class="font-extrabold py-3 text-[1.3rem]">Fast Delivery</h1>
-                <p class="text-gray-500">Delivery that is always even faster.</p>
-              </div>
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/pizza.png" alt="pizza-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Veggie pizza</h1>
+
+              <span class="text-[#F2bd12] font-bold">$10.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
             </div>
 
+          </div>
 
-             <div class=" flex flex-col justify-center items-center">
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/fried-chicken.png" alt="fried-chicken-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Fried Chicken</h1>
 
-              <div>
-                <img class="w-20" src="/assets/best-quality.png" alt="easy-order-png">
-              </div>
-              <div class="text-center pb-2">
-                <h1 class="font-extrabold py-3 text-[1.3rem]">Best Quality</h1>
-                <p class="text-gray-500">Not only fast us in quality is also number one.</p>
-              </div>
+              <span class="text-[#F2bd12] font-bold">$13.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
             </div>
 
-            
+          </div>
 
-           </div>
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/chicken-roll.png" alt="burger-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Chicken Roll</h1>
+
+              <span class="text-[#F2bd12] font-bold">$7.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
+            </div>
+
+          </div>
+
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/sandwich.png" alt="sandwich-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Sub Sandwich</h1>
+
+              <span class="text-[#F2bd12] font-bold">$6.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
+            </div>
+
+          </div>
+
+
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/lasagna.png" alt="lasagna-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Chicken Lasagna</h1>
+
+              <span class="text-[#F2bd12] font-bold">$14.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
+            </div>
+
+          </div>
+
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/spaghetti.png" alt="spaghetti-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Tallian Spaghetti</h1>
+
+              <span class="text-[#F2bd12] font-bold">$7.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
+            </div>
+
+          </div>
+
+          <div
+            class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
+            <div>
+              <img class="w-45 lg:w-52" src="/assets/spring-roll.png" alt="spring-roll-png">
+            </div>
+            <div class="text-center">
+              <h1 class="text-xl font-bold">Spring Roll</h1>
+
+              <span class="text-[#F2bd12] font-bold">$5.99</span>
+            </div>
+            <div>
+              <button class="btn">Add to cart</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEW-SECTION -->
+    <section class="w-full py-25">
+      <div class="container">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-10">
+          <div class="flex-1">
+            <img src="./assets/delivery-boy-with-phone.png" alt="delivery with phone" class="m-auto">
+          </div>
+
+          <div class="overflow-hidden flex-1">
+            <div>
+              <h5 class="text-[#F2bd12] font-bold">OUR REVIEWS</h5>
+              <h2 class="text-3xl font-bold lg:text-4xl">What they say?</h2>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper relative w-[100%] h-[100%] mt-7">
+              <div class="swiper-wrapper p-7">
+
+                <div class="swiper-slide">
+                  <div class="flex items-center gap-4">
+                    <div>
+                      <img src="/assets/profile1.jpeg" alt="" class="w-15 h-15 object-cover rounded-[50%]">
+                    </div>
+                    <div>
+                      <h1 class="font-bold text-[1.2rem]">Guy Hawkins</h1>
+                      <div class="text-[#F2bd12]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="mt-3.5 max-w-[420px]">
+                      Foodie is the best food delivery service I have ever used. The food is always fresh and delicious,
+                      and the delivery is always fast. I highly recommend Foodie to anyone looking for a great food
+                      delivery experience.
+                    </p>
+                  </div>
+                </div>
+
+                  <div class="swiper-slide">
+                  <div class="flex items-center gap-4">
+                    <div>
+                      <img src="/assets/profile2.jpeg" alt="" class="w-15 h-15 object-cover rounded-[50%]">
+                    </div>
+                    <div>
+                      <h1 class="font-bold text-[1.2rem]">Sophia Anderson</h1>
+                      <div class="text-[#F2bd12]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="mt-3.5 max-w-[420px]">
+                      Foodie is the best food delivery service I have ever used. The food is always fresh and delicious,
+                      and the delivery is always fast. I highly recommend Foodie to anyone looking for a great food
+                      delivery experience.
+                    </p>
+                  </div>
+                </div>
+
+                  <div class="swiper-slide">
+                  <div class="flex items-center gap-4">
+                    <div>
+                      <img src="/assets/profile3.jpeg" alt="" class="w-15 h-15 object-cover rounded-[50%]">
+                    </div>
+                    <div>
+                      <h1 class="font-bold text-[1.2rem]">Olivia smith</h1>
+                      <div class="text-[#F2bd12]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="mt-3.5 max-w-[420px]">
+                      Foodie is the best food delivery service I have ever used. The food is always fresh and delicious,
+                      and the delivery is always fast. I highly recommend Foodie to anyone looking for a great food
+                      delivery experience.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            <div class="flex justify-between items-center font-bold text-[1.3rem]">
+              <a href="" id="prev" class=" w-[2.5rem] aspect-[1] rounded-[100vw] bg-[#F2bd12] text-center leading-[2.5rem]">
+                <i class="ri-arrow-left-line"></i>
+              </a>
+
+              <a href="" id="next" class="w-[2.5rem] aspect-[1] rounded-[100vw] bg-[#F2bd12] text-center leading-[2.5rem]">
+                <i class="ri-arrow-right-line"></i>
+              </a>
+                
+            </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Application section -->
+     <section class="w-full py-25">
+      <div class="container">
+        <div class=" bg-[#fcf1cc] flex justify-center h-[100%] flex-col gap-10 md:flex-row md:items-center rounded-4xl p-7">
+          <div class="flex-1 flex justify-center items-center">
+            <img src="/assets/mobile-app.png" class="w-[49vw] m-auto md:w-[30vw]" alt="mobile-app">
+          </div>
+          <div class="flex-1">
+            <span class="text-[#F2bd12] font-semibold">OUR APPLICATION</span>
+            <h1 class="text-5xl md:text-6xl font-semibold leading-13.5 md:leading-16">Simple Way to<br>Order Food</h1>
+            <p class="max-w-[320px] py-3">Download our app and enjoy delicious food delivered to your doorstep.</p>
+            <div>
+              <button class="btn">Get the App</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- Newsletter section -->
+      <section class="w-full py-25">
+        <div class="container">
+          <div class="flex flex-col justify-center items-center">
+            <div>
+              <div class="text-center flex flex-col gap-5">
+                 <span class="text-[#F2bd12] font-semibold">OUR SUBSCRIBE</span>
+                 <h1 class="capitalize font-bold text-3xl md:text-4xl">Subscribe to Our Newsletter</h1>
+                 <p>we will never share your email with anyone else<br>below to get daily updates about us.</p>
+              </div>
+              <div>
+                <form class="flex justify-center mt-10">
+                  <div class="w-full p-2 flex justify-between rounded-2xl shadow-2xl">
+                  <input type="email" placeholder="Enter your email" class="rounded-l-[.5rem] py-3 px-5 focus:outline-none">
+                  <button class="btn rounded-r-[.5rem]">Subscribe</button>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- MENU-SECTION -->
-      <section>
-        <div class="container">
-         <div class="text-center">
-            <h4 class="text-[#F2bd12] font-semibold text-[0.9rem]">OUR MENU</h4>
-            <h1 class="text-3xl font-extrabold">The Most Popular</h1>
-          </div>
-          <!-- menu-cards-container -->
-           <div class="py-20 grid grid-cols-1 gap-10 lg:grid-cols-4 md:grid-cols-2  justify-items-center">
+  </main>
 
-            <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/burger.png" alt="burger-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Double Beef Burger</h1>
+  <footer></footer>
 
-                <span class="text-[#F2bd12] font-bold">$12.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
 
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/pizza.png" alt="pizza-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Veggie pizza</h1>
-
-                <span class="text-[#F2bd12] font-bold">$10.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/fried-chicken.png" alt="fried-chicken-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Fried Chicken</h1>
-
-                <span class="text-[#F2bd12] font-bold">$13.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/chicken-roll.png" alt="burger-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Chicken Roll</h1>
-
-                <span class="text-[#F2bd12] font-bold">$7.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/sandwich.png" alt="sandwich-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Sub Sandwich</h1>
-
-                <span class="text-[#F2bd12] font-bold">$6.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/lasagna.png" alt="lasagna-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Chicken Lasagna</h1>
-
-                <span class="text-[#F2bd12] font-bold">$14.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/spaghetti.png" alt="spaghetti-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Tallian Spaghetti</h1>
-
-                <span class="text-[#F2bd12] font-bold">$7.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-
-             <div class="flex flex-col justify-center items-center gap-5 bg-[#fff] border-2 border-amber-300  py-10 px-10 lg:py-5 lg:px-5 rounded-[1.5rem] shadow-[0px_8px_16px_rgba(0,0,0,0.1),inset_0px_1px_2px_rgba(255,255,255,0.8),inset_0px_-1px_2px_rgba(0,0,0,0.05)] ">
-              <div>
-                <img class="w-45 lg:w-52" src="/assets/spring-roll.png" alt="spring-roll-png">
-              </div>
-              <div class="text-center">
-                <h1 class="text-xl font-bold">Spring Roll</h1>
-
-                <span class="text-[#F2bd12] font-bold">$5.99</span>
-              </div>
-              <div>
-                <button class="btn">Add to cart</button>
-              </div>
-
-            </div>
-            
-           </div>
-           </div>
-      </section>
-    </main>
-
-    <footer></footer>
-
-    <script src="./js/main.js"></script>
-  </body>
 </html>

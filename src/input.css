@@ -2,12 +2,29 @@
 @import "tailwindcss";
 
 .container {
-  @apply m-auto w-[90%] sm:max-w-[660px] lg:max-w-[1200px];
+  @apply m-auto w-[90%] sm:w-full lg:max-w-[1200px];
 }
 
 .btn {
   @apply text-[#fff] bg-[#F2bd12] py-2 px-3 duration-500 ease-linear lg:py-3 lg:px-5 rounded-lg cursor-pointer;
 }
+
+.btn-secondary {
+  @apply text-[#fff] bg-black py-2 px-3 duration-500 ease-linear lg:py-3 lg:px-5 rounded-lg cursor-pointer;
+}
+
+.cart::-webkit-scrollbar {
+  @apply w-[0rem];
+}
+
+.item-list {
+  @apply flex items-center gap-5 mb-2.5 p-5;
+}
+
+.card-image {
+  @apply w-[1rem];
+}
+
 
 /* .btn:hover {
   @apply bg-[#FFFDF7] border-2  border-amber-400 text-black;

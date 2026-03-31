@@ -19,6 +19,7 @@ const cartIcon = document.getElementById("cart-icon");
 const cartTab = document.getElementById("cart-tab");
 const closeBtn = document.getElementById("close-btn");
 const cartList = document.getElementById("cart-list");
+const AddCartitems = document.getElementById("cart-items");
 
 cartIcon.addEventListener("click", () => {
   cartTab.classList.toggle("left-auto");
@@ -64,9 +65,6 @@ const showCards = () => {
   });
 };
 
-const addToCart = () => {
-  
-}
 
 const initApp = () => {
   fetch("products.json")

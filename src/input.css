@@ -21,15 +21,6 @@
   @apply flex items-center gap-5 mb-2.5 p-5;
 }
 
-.card-image {
-  @apply w-[1rem];
-}
-
-
-/* .btn:hover {
-  @apply bg-[#FFFDF7] border-2  border-amber-400 text-black;
-} */
-
 html {
   @apply scroll-smooth;
 }

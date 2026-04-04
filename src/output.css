@@ -253,9 +253,6 @@
   .mx-\[\.3rem\] {
     margin-inline: .3rem;
   }
-  .mt-3 {
-    margin-top: calc(var(--spacing) * 3);
-  }
   .mt-3\.5 {
     margin-top: calc(var(--spacing) * 3.5);
   }
@@ -270,9 +267,6 @@
   }
   .mt-\[10rem\] {
     margin-top: 10rem;
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
   }
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
@@ -295,14 +289,14 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .aspect-\[1\] {
     aspect-ratio: 1;
   }
   .h-15 {
     height: calc(var(--spacing) * 15);
+  }
+  .h-\[5rem\] {
+    height: 5rem;
   }
   .h-\[23px\] {
     height: 23px;
@@ -327,9 +321,6 @@
   }
   .w-\[5rem\] {
     width: 5rem;
-  }
-  .w-\[10rem\] {
-    width: 10rem;
   }
   .w-\[23px\] {
     width: 23px;
@@ -358,9 +349,6 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .translate-x-\[-50\%\] {
     --tw-translate-x: -50%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -370,9 +358,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -391,9 +376,6 @@
   }
   .justify-items-center {
     justify-items: center;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
@@ -456,10 +438,6 @@
   .rounded-r-\[\.5rem\] {
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -599,13 +577,6 @@
   .text-\[1rem\] {
     font-size: 1rem;
   }
-  .text-\[16\.1rem\] {
-    font-size: 16.1rem;
-  }
-  .leading-13 {
-    --tw-leading: calc(var(--spacing) * 13);
-    line-height: calc(var(--spacing) * 13);
-  }
   .leading-13\.5 {
     --tw-leading: calc(var(--spacing) * 13.5);
     line-height: calc(var(--spacing) * 13.5);
@@ -653,9 +624,6 @@
   .capitalize {
     text-transform: capitalize;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -663,10 +631,6 @@
   .shadow-\[0px_8px_16px_rgba\(0\,0\,0\,0\.1\)\,inset_0px_1px_2px_rgba\(255\,255\,255\,0\.8\)\,inset_0px_-1px_2px_rgba\(0\,0\,0\,0\.05\)\] {
     --tw-shadow: 0px 8px 16px var(--tw-shadow-color, rgba(0,0,0,0.1)), inset 0px 1px 2px var(--tw-shadow-color, rgba(255,255,255,0.8)), inset 0px -1px 2px var(--tw-shadow-color, rgba(0,0,0,0.05));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-\[\.3s\] {
     transition-property: .3s;
@@ -935,9 +899,6 @@
   gap: calc(var(--spacing) * 5);
   padding: calc(var(--spacing) * 5);
 }
-.card-image {
-  width: 1rem;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -1054,11 +1015,6 @@ html {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1095,7 +1051,6 @@ html {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }

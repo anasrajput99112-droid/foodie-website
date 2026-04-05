@@ -19,8 +19,23 @@ const cartIcon = document.getElementById("cart-icon");
 const cartTab = document.getElementById("cart-tab");
 const closeBtn = document.getElementById("close-btn");
 const cartList = document.getElementById("cart-list");
-// const AddCartitems = document.getElementById("cart-items");
 const cardList = document.getElementById("card-list");
+const cartTotal = document.getElementById("cart-total");
+const cartValue = document.getElementById("cart-value");
+const humbuger = document.getElementById("humbuger");
+const navbar = document.getElementById("navbar");
+const bar = document.querySelector(".ri-menu-line")
+
+
+// toggle menu
+humbuger.addEventListener("click", () => {
+  navbar.classList.toggle("left-[50%]");
+
+});
+
+humbuger.addEventListener("click", () => {
+  bar.classList.toggle("ri-close-fill");
+});
 
 cartIcon.addEventListener("click", () => {
   cartTab.classList.toggle("left-auto");
@@ -33,6 +48,23 @@ closeBtn.addEventListener("click", () => {
 
 let productList = [];
 let cartProduct = [];
+
+const updateTotal = () => {
+  let totalPrice = 0;
+  let totalQuantity = 0;
+
+  document.querySelectorAll(".items").forEach((item) => {
+    const itemTotal = item.querySelector(".item-total");
+    const quantityValue = item.querySelector(".quantity-value");
+    const quantity = parseInt(quantityValue.textContent);
+    const price = parseFloat(itemTotal.textContent.replace("$", ""));
+    totalPrice += price;
+    totalQuantity += quantity;
+  });
+
+  cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+  cartValue.textContent = totalQuantity;
+};
 
 const showCards = () => {
   productList.forEach((product) => {
@@ -96,6 +128,7 @@ const addToCart = (product) => {
                  </div> 
                  </div>`;
   cardList.appendChild(cartItem);
+  updateTotal();
 
   const plusBtn = cartItem.querySelector(".plus");
   const minusBtn = cartItem.querySelector(".minus");
@@ -106,6 +139,7 @@ const addToCart = (product) => {
     quantity++;
     quantityValue.textContent = quantity;
     itemTotal.textContent = `$${(Price * quantity).toFixed(2)}`;
+    updateTotal();
     e.preventDefault();
   });
 
@@ -114,12 +148,14 @@ const addToCart = (product) => {
       quantity--;
       quantityValue.textContent = quantity;
       itemTotal.textContent = `$${(Price * quantity).toFixed(2)}`;
+      updateTotal();
     } else {
-     setTimeout(() => {
-      cartItem.remove();
-     }, 300);
-     cartProduct = cartProduct.filter((item) => item.id !== product.id);
-     alert("Product removed from cart");
+      setTimeout(() => {
+        cartItem.remove();
+        updateTotal();
+      }, 300);
+      cartProduct = cartProduct.filter((item) => item.id !== product.id);
+      alert("Product removed from cart");
     }
 
     e.preventDefault();

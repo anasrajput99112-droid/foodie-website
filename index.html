@@ -21,7 +21,7 @@
       </div>
 
       <ul id="navbar"
-        class="flex flex-col items-center absolute top-[20%] left-[-100%] duration-500 transition-all transform translate-x-[-50%]  p-[2rem] shadow-2xl  px-30 bg-amber-50 gap-6 font-[500] border-[.1rem] border-amber-300 rounded-[2rem] lg:flex lg:flex-row lg:sticky lg:top-0 lg:left-0 lg:translate-x-[0%]  lg:bg-transparent  lg:border-0 lg:px-0 lg:shadow-[0] lg:transition-none lg:duration-0">
+        class="flex flex-col items-center absolute top-[20%] -left-[50%] duration-500 transition-all transform translate-x-[-50%]  p-[2rem] shadow-2xl  px-30 bg-amber-50 gap-6 font-[500] border-[.1rem] border-amber-300 rounded-[2rem] lg:flex lg:flex-row lg:sticky lg:top-0 lg:left-0 lg:translate-x-[0%]  lg:bg-transparent  lg:border-0 lg:px-0 lg:shadow-[0] lg:transition-none lg:duration-0">
         <li><a href="#Home">Home</a></li>
         <li><a href="#Menu">Menu</a></li>
         <li><a href="#Service">Service</a></li>
@@ -40,7 +40,7 @@
         </a>
 
         <!-- menubtn -->
-        <div class="text-3xl font-bold text-[#000] lg:hidden cursor-pointer">
+        <div id="humbuger" class="text-3xl font-bold text-[#000] lg:hidden cursor-pointer">
           <i class="ri-menu-line"></i>
         </div>
 
@@ -164,7 +164,7 @@
               <!-- cart total -->
                <div class=" w-full bg-[#F2bd12] flex justify-center items-center gap-5 py-3 mb-2.5">
                 <h4>Total:</h4>
-                <h4>$0.00</h4>
+                <h4 id="cart-total">$0.00</h4>
                </div>
                <!-- btn  -->
                 <div class="flex gap-2.5">
